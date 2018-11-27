@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <script>
+   var myString = "123";
+   var myNum = Number(myString);
+   console.log(myNum);
+   console.log(typeof myNum);
+
+   var myString2 = myNum.toString();
+   console.log(myString2);
+   console.log(typeof myString2);
+
+   console.log("JavaScript String Methods");
+
+//String lenght
+   var txt = "ABCDEFGHIJKLMNÑOPQRSTUVWKYZ";
+   let sLn = txt.length;
+   console.log(sLn);
+
+   //Finding a String in a String
+
+   let str = "Please locate where 'locate' occurs!";
+   let pos = str.indexOf("locate");
+   console.log(pos);
+   let lPos = str.lastIndexOf("locate");
+   console.log(lPos);
+   let fSearch = str.search("locate");
+   console.log(fSearch);
+
+        //The search method cannot take a second start position argument
+        //The indexOf method cannot take powerful search values
+
+
+// Extracting String Parts
+console.log("Extracting String Parts");
+
+let strESP = "Apple, Banana, Kiwi";
+
+let bStart = strESP.indexOf("Banana");
+
+let bEnd = strESP.lastIndexOf("Banana");
+
+console.log(bStart);
+console.log(bEnd);
+
+let res = strESP.slice(bStart, 13);
+console.log(res);
+let res2 = strESP.slice(-12, -6);
+console.log(res2);
+let w = strESP.slice(7);
+console.log(w);
+let w2 = strESP.slice(-12);
+console.log(w2);
+
+//The Substring MEthod
+
+console.log("The Substring() method");
+var egSubsstring = strESP.substring(7,13);
+console.log(egSubsstring);
+
+    //The difference between substring and slice is that substring cannot accet negative values
+
+//The substr() Method
+
+console.log("The Substr() Method");
+
+let egSubstr = strESP.substr(7, 6);
+console.log(egSubstr);
+
+let negSubstr = strESP.substr(-4);
+console.log(negSubstr);
+
+
+//Replacing String Content
+
+console.log("Replacing String Content");
+let strReplace = "Please visit Microsoft and Microsoft!";
+let egReplace = strReplace.replace("Microsoft", "TheOdinProject");
+console.log(egReplace);
+
+let strIncase =("This is incorrect");
+console.log(strIncase);
+let egIncase = strIncase.replace(/INCORRECT/i, "correct!");
+console.log(egIncase);
+
+let replaceMulti = "I like stuff, stuff, and stuff..."
+console.log(replaceMulti);
+let egReplaseMulti = replaceMulti.replace(/stuff/g, "metal");
+console.log(egReplaseMulti);
+
+//Converting to Upper and Lower Case 
+
+let text1 = "lower case";
+console.log(text1);
+let toUpper = text1.toUpperCase();
+console.log(toUpper);
+
+let text2 = "UPPER CASE";
+console.log(text2);
+let tuLower = text2.toLowerCase();
+console.log(tuLower);
+
+//The String.trim()
+
+let wSpace = "This    got    a   lot   of    white    space";
+console.log(wSpace);
+let woSpace = wSpace.trim();
+console.log(woSpace);
+
+
+//Extracting String Characters
+
+let charExtract = "HELLO WORLD";
+
+
+    //The charAT() method
+
+    
+    let egCharat = charExtract.charAt(0);
+    console.log(egCharat);
+    
+    //The charCodeAt() Method
+
+    
+    let egCharcode = charExtract.charCodeAt(0);
+    console.log(egCharcode);
+
+//Converting a string to an Array 
+
+let txtString = "a,b,c,d,e";
+commaSplit =     txtString.split(",");
+    txtString.split(" ");
+    txtString.split("|");
+
+    console.log(commaSplit[0]);
+    console.log(commaSplit[1]);
+    console.log(commaSplit[2]);
+
+
+//Comparisons
+console.log("Comparisons");
+console.log( 2 > 1);
+console.log( 2 == 1);
+console.log( 2 != 1);
+
+let resultado = 5 > 4;
+console.log(resultado);
+
+console.log( "Z" > "A");
+console.log( "Glow" > "Glee");
+console.log( "Bee" > "Be");
+
+console.log( "1" > 1);
+console.log( "01" == 1);
+
+console.log("Funny consequence");
+
+let a = 0;
+
+console.log( Boolean(a));
+
+let b = "0";
+
+console.log( Boolean(b));
+
+console.log(a == b );
+
+//Strict Equality
+
+console.log("Sctric Equality");
+
+console.log( 0 == false);
+
+console.log( '' == false);
+
+console.log( 0 === false);
+
+console.log( null == undefined);
+console.log( null === undefined);
+
+//Tasks
+console.log("Tasks");
+console.log(5 > 4);
+console.log("apple" > "pineapple");
+console.log("2" > "12");
+console.log( undefined == null);
+console.log(undefined === null);
+console.log( null == "\n0\n");
+console.log(null === +"\n0\n");
+
+
+//LOgical Operators
+
+
+console.log("Logical Operators");
+console.log( true || true);
+console.log( false || true);
+console.log( true || false);
+console.log( false || false);
+
+let hour = 9;
+
+if (hour < 10 || hour > 18) {
+    console.log( "La oficina está cerrada");
+}
+
+let edad = 16;
+
+if (edad >= 18) {
+    console.log("Es mayor de edad");
+}
+
+let hora = 12;
+let minuto = 30;
+
+if (hora == 12 && minuto == 30){
+    console.log("Son las 12:30");
+}
+
+console.log( hora != 15);
+
+//Tasks
+
+console.log("Tasks");
+
+console.log( null || 2 || undefined);
+console.log( console.log(1) || 2 || console.log(3));
+console.log(1 && null && 2);
+console.log( console.log(1) && console.log(2));
+console.log( null || 2 && 3 || 4);
+
+let edad2 = 16;
+
+if (edad2 >= 14 && edad2 <= 90) {
+    console.log("Cumple los requerimientos de edad");
+}
+
+if (!(edad2 >= 14 && edad2 <= 90)) {
+    console.log("No cumple los requerimientos de edad");
+}
+
+
+if (-1 || 0) {
+    console.log("first");
+}
+
+if(-1 && 0) {
+    console.log("second");
+}
+
+if (null || -1 && 1){
+    console.log("third");
+}
+
+//Conditional Statements
+
+console.log("Conditional statements");
+
+if (hour < 18){
+    console.log("It is a good day");
+}
+
+
+let shoppingDone = false;
+
+if (shoppingDone === true) {
+    let childsAllowance = 10;
+} else {
+    let childsAllowance = 5;
+}
+
+
+// ( condition ) ? run this code : run this code instead
+
+/*
+
+switch (expression) {
+    case x:
+    code to execute;
+    break;
+    cae y:
+    code to execute;
+    break;
+    default:
+}
+
+*/
+
+
+const month = new Date().getMonth();
+console.log(month);
+
+switch (month) {
+    case 0:
+    case 1:
+    case 2: 
+    console.log("Winter");
+    break;
+
+    case 3:
+    case 4:
+    case 5:
+    console.log("Spring");
+    break;
+
+    case 6:
+    case 7:
+    case 8:
+    console.log("Summer");
+    break;
+
+    case 9:
+    case 10:
+    case 11:
+    console.log("Winter");
+    break;
+
+    default:
+    console.log("Something went wrong");
+}
+
+
+//Console tricks
+
+console.log("Console Tricks");
+
+  //Regular
+  console.log("Hello");
+  //INterplated
+  console.log(`${700-34} - The Number of The Beast`);
+  //Styled 
+  console.log('%c I am some great text', 'font-size:20px;')
+  //Warning!
+  console.warn("OH NO");
+  //Error
+  console.error("Shit!");
+  //Info
+  console.info("Crocodiles eat 3-4 people per year");
+  //Testing
+  console.assert( 1 === 1, 'That is wrong!');
+  //Clear
+      //console.clear();
+
+  //Viewing DOM elements
+  console.log();
+  console.dir();
+
+  //Grouping together
+
+     //console.group();
+
+  //Count
+  console.count("Judas");
+  console.count("Juan");
+  console.count("Judas");
+  console.count("Juan");
+  console.count("Judas");
+  console.count("Juan");
+  console.count("Judas");
+  console.count("Juan");
+  console.count("Judas");
+  console.count("Juan");
+
+  //Timing 
+/*
+
+  console.time("Fetching Data");
+  fetch("https://api.github.com/users/wesbos")
+  .then(data => data.json())
+  .then(data => {
+      console.timeEnd("Fetching Data");
+      console.log(data);
+  });*/
+
+  //Tables
+
+  console.table(); 
+
+
+console.clear();
+  //JAVASCRIPT FUNCTIONS
+
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
+console.log(newString);
+
+var myArray = ["I", "love", "chocolate", "frogs"];
+var madeAString = myArray.join(' ');
+console.log(madeAString);
+
+var myNUmber = Math.random();
+console.log(myNUmber);
+
+
+
+function random(number) {
+    console.log(Math.floor(Math.random()*number));
+    
+
+ }
+
+random(5);
+
+function myFunction(){
+    console.log("Hello");
+}
+
+myFunction();
+
+var myGreeting = function() {
+    console.log("Hola");
+}
+
+myGreeting();
+
+var anotherGreeting = function() {
+    console.log("Hola");
+}
+
+
+console.log("Function Basics");
+
+function showMessage() {
+ console.log("Hello everyone!");
+}
+
+showMessage();
+showMessage();
+
+
+// Local variables 
+
+function showMessage1() {
+    let message = "Hello,I'm Javascript!";
+    console.log(message);
+}
+
+showMessage1();
+
+//Outer variables
+
+let userName = "John";
+
+function showMessage2() {
+    let message = "Helo, " + userName;
+    console.log(message);
+}
+
+showMessage2();
+
+function showMessage3() {
+    userName = "Bob";
+    let message = "Hello, " + userName;
+    console.log(message);
+}
+
+showMessage2();
+showMessage3();
+console.log(userName);
+
+
+//Parameters
+
+function showMessage4(from, text) {
+    console.log(from + " : " + text);
+} 
+
+showMessage4("Ann", "Hello!");
+showMessage4("Claudia", "Hi! HOw are you?");
+
+
+function showMessage5(from, text = "no text given") {
+    from = '*' + from + '*';
+    console.log(from + ": " + text);
+}
+
+showMessage5("Brooke", "Fuck me");
+
+let from = "Ann";
+
+showMessage5(from, "Hello");
+
+console.log(from);
+
+
+//Default values
+
+showMessage5("Ann");
+
+function oldStyleA(from, text) {
+    if ( text === undefined) {
+        text = "no text given";
+    }
+    console.log ("from" + ": " + text);
+}
+
+function oldStyleB(from,text) {
+    text = text || "no text given";
+    console.log ("from" + ": " + text);
+
+}
+
+
+//Returning a value
+
+console.log("Returning a value");
+function sum(a,b) {
+    return a + b;
+}
+
+let result = sum(1,2);
+
+console.log(result);
+
+
+/*
+
+function checkAge(age) {
+    if ( age > 18) {
+        return true;
+    } else {
+        return confirm("Do you have permission from your parents?")
+    }
+}
+
+let age = prompt("HOw old are you", 18);
+
+
+if (checkAge(age)) {
+    alert ("Access granted");
+} else ("Access denied");
+
+*/
+
+
+function checkAge(age) {
+    if ( age > 18) {
+        return true;
+    } 
+            return console.log("Did parents allow you?");
+    
+}
+
+
+checkAge(15);
+
+
+function checkAge1(age) {
+    ( age > 18) ? true : console.log("LOL");
+}
+
+checkAge1(15);
+
+
+function checkAge2(age) {
+    return (age > 18) || console.log("Did your parents allow you?");
+}
+
+checkAge2(15);
+
+function min(a,b){
+     a < b  ? console.log(a) : console.log(b);
+}
+
+min(2,5);
+min(3,-1);
+min(1,1);
+
+/*
+
+let x = Number(prompt("Enter x"));
+let n = Number(prompt("Enter n"));
+
+function pow() {
+    for ( let i=1; i<n; i++){
+    result *=x;
+}
+console.log(result);
+}
+
+console.log(pow());
+
+*/
+
+
+//Function expressions arrows
+
+console.log("Function expressions arrows");
+
+console.log("let func = (arg1, arg2, ...argN) => expression")
+
+let suma = (a,b) => a+b;
+
+console.log( suma(1,2));
+
+
+let double = n => n*2;
+
+console.log(double(5));
+
+let double2 = (x) => x*2;
+
+console.log(double(10));
+
+let sayHi = () => console.log("Quepasopuespelekuka");
+
+sayHi();
+
+let age2 = 18;
+
+let welcome = (age2<18) ? () => console.log("Hello") : () => console.log("Greetings!");
+
+welcome();
+
+
+console.log("Arrow functions tasks");
+
+let ask = (question,yes,no) => {
+    confirm(question) ? yes() : no();
+}
+
+ask("Aceptas?", ()=> console.log("Aceptaste"), ()=> console.log("No aceptaste"));
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

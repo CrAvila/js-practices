@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fundamentals 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <script>
+    
+    //Arrays
+
+    //Creating an Array
+
+    let cars = ["Saab", "Volvo", "BMW"];
+
+    //Access the elements of an Array
+
+    let name = cars[0];
+
+    console.log(name);
+
+    //Changing an Array Element 
+
+    cars[0] = "Opel";
+
+    console.log(cars[0]);
+
+    //Access the full Array
+
+    console.log(cars);
+
+    var arrLength = cars.length;
+    var arrShort = cars.sort();
+
+    console.log(arrLength);
+    console.log(arrShort);
+
+    //Accessing the First Array Element
+
+    let fruits = ["Banana","Orange","Apple","Mango"];
+
+    let firstFruit = fruits[0];
+
+    console.log(firstFruit);
+
+    //Accessing the last Array Element
+
+    let lastFruit = fruits[fruits.length -1];
+
+    console.log(lastFruit);
+
+    //Looping Array Elements
+
+    let ironMaidenMembers = ["Bruce Dickinson", "Steve Harris", "Dave Murray", "Adrian Smith", "Janick Gers", "Niko McBrain"]
+    ironMaidenMembers.push("Eddie The Head");
+
+    let membersLength = ironMaidenMembers.length;
+
+    let displayMembers = () => {
+        for (i=0; i < membersLength; i++) {
+            console.log(ironMaidenMembers[i]);
+        }
+    }
+
+
+    //Adding Array Elelements
+
+    
+    displayMembers();
+    
+    //Check if x is an array 
+
+    let isArray = (x) => {
+        console.log(x.constructor.toString().indexOf("Array") > -2);
+    }
+
+    isArray(ironMaidenMembers);
+
+    console.log(ironMaidenMembers instanceof Array);
+
+
+    //Converting Arrays to Strings
+
+    console.log(ironMaidenMembers.toString());
+
+    console.log(ironMaidenMembers.join( " | " ));
+
+    //Popping and Pushing
+
+    console.log(ironMaidenMembers.pop()); //Removes last element of the Array
+
+    fruits.push("Kiwi"); //Adds an element to the Array
+
+    console.log(fruits);
+
+    console.log(ironMaidenMembers.shift()); //Removes the first element of the Array
+
+    console.log(ironMaidenMembers); //Adds a new element to and array (at the beginning)
+
+    ironMaidenMembers.unshift("Bruce Dickinson");
+
+    console.log(ironMaidenMembers);
+
+    //Deleting elements 
+
+    delete fruits[2];
+
+    console.log(fruits);
+
+
+
+
+
+    </script>
+
+</body>
+</html>
